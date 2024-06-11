@@ -25,4 +25,17 @@ class Enemy1 extends Character {
         super(name, maxHitPoints, damage)
     }
 }
-export { Character, Player, Enemy1 }
+
+class Enemy2 extends Character {
+    constructor(name, maxHitPoints, damage){
+        super(name, maxHitPoints, damage)
+    }
+}
+
+class Enemy3 extends Character {
+    constructor(name, maxHitPoints, damage){
+        super(name, maxHitPoints, damage)
+    }
+}
+
+export { Character, Player, Enemy1, Enemy2, Enemy3 }
