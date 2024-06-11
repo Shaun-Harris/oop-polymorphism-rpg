@@ -19,4 +19,10 @@ class Player extends Character {
         super(name, maxHitPoints, damage)
     }
 }
-export { Character, Player }
+
+class Enemy1 extends Character {
+    constructor(name, maxHitPoints, damage){
+        super(name, maxHitPoints, damage)
+    }
+}
+export { Character, Player, Enemy1 }

@@ -1,4 +1,4 @@
-import { Character, Player } from "../src/index.js"
+import { Character, Enemy1, Player } from "../src/index.js"
 
 //Test for Character Class 
 it('Character should take damage correctly', () => {
@@ -20,3 +20,12 @@ it('Player should inherit from Character and take damage', () => {
 })
 
 
+//Test for Enemy 1 
+
+it('Enemy1 should inherit from Character and take damage', () => {
+    const enemy1 = new Enemy1('Enemy1', 80, 10)
+    const player = new Player('Player', 100, 20)
+
+    enemy1.takeDamage(player)
+    expect(enemy1.currentHitPoints).toBe(90)
+})
