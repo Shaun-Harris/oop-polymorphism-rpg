@@ -38,4 +38,21 @@ class Enemy3 extends Character {
     }
 }
 
-export { Character, Player, Enemy1, Enemy2, Enemy3 }
+class BattleScene {
+    fight(player, enemy) {
+        while (player.currentHitPoints > 0 && enemy.currentHitPoints > 0) {
+            enemy.takeDamage(player)
+            if (enemy.currentHitPoints > 0) {
+                player.takeDamage(enemy)
+            }
+        }
+
+        if (player.currentHitPoints > 0) {
+            return player.name
+        } else {
+            return enemy.name
+        }
+    }
+}
+
+export { Character, Player, Enemy1, Enemy2, Enemy3, BattleScene }

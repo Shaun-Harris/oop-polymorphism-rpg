@@ -1,6 +1,7 @@
-import { Character, Enemy1, Enemy2, Enemy3, Player } from "../src/index.js"
+import { BattleScene, Character, Enemy1, Enemy2, Enemy3, Player } from "../src/index.js"
 
 //Test for Character Class 
+
 it('Character should take damage correctly', () => {
     const char1 = new Character('Char1', 100, 10)
     const char2 = new Character('Char2', 100, 25)
@@ -18,7 +19,6 @@ it('Player should inherit from Character and take damage', () => {
     player.takeDamage(ememy)
     expect(player.currentHitPoints).toBe(85)
 })
-
 
 //Test for Enemy 1 
 
@@ -48,4 +48,16 @@ it('Enemy3 should inherit from Character and take damage', () => {
 
     enemy3.takeDamage(player)
     expect(enemy3.currentHitPoints).toBe(70)
+})
+
+//Test for BattleScene 
+
+it('BattleScene should simulate a figth and return the winner', () => {
+    const enemy = new Enemy1('Enemy1', 800, 10)
+    const player = new Player('Player', 100, 20)
+
+    const battle = new BattleScene()
+    const winner = battle.fight(player, enemy)
+
+    expect(winner).toBe('Player')
 })
