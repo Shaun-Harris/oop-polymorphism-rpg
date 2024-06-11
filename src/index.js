@@ -14,4 +14,9 @@ class Character {
     }
 }
 
-export { Character }
+class Player extends Character {
+    constructor(name, maxHitPoints, damage) {
+        super(name, maxHitPoints, damage)
+    }
+}
+export { Character, Player }
