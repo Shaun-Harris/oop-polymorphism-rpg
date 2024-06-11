@@ -53,7 +53,7 @@ it('Enemy3 should inherit from Character and take damage', () => {
 //Test for BattleScene 
 
 it('BattleScene should simulate a figth and return the winner', () => {
-    const enemy = new Enemy1('Enemy1', 800, 10)
+    const enemy = new Enemy1('Enemy1', 80, 10)
     const player = new Player('Player', 100, 20)
 
     const battle = new BattleScene()
