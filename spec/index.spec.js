@@ -16,7 +16,7 @@ it('Player should inherit from Character and take damage', () => {
     const ememy = new Character('Enemy', 100 , 15)
 
     player.takeDamage(ememy)
-    expect(player.currentHitPoints).toBe(75)
+    expect(player.currentHitPoints).toBe(85)
 })
 
 
